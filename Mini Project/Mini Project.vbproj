@@ -1,0 +1,823 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D809296C-2A15-4BD8-A017-AA428FABBC0E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>Mini_Project.My.MyApplication</StartupObject>
+    <RootNamespace>Mini_Project</RootNamespace>
+    <AssemblyName>Mini Project</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>Mini Project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Mini Project.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bunifu.Licensing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=f89b4760ba7dcb6b, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.Licensing.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.1.5.3, Version=1.5.3.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.1.5.3.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCheckBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCheckBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuCircleProgress, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuCircleProgress.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuColorTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuColorTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDataGridView, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDataGridView.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDatePicker, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDatePicker.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuDropdown, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuDropdown.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuFormDock, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuFormDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGauge, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGauge.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGradientPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGradientPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuGroupBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuGroupBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuImageButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuImageButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLabel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLabel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuLoader, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuLoader.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPages, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPages.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuPictureBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuPictureBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuProgressBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuProgressBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRadioButton, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRadioButton.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuRating, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuRating.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuScrollBar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuScrollBar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSeparator, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSeparator.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShadowPanel, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShadowPanel.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuShapes, Version=5.3.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuShapes.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSlider, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSlider.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuSnackbar, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuSnackbar.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTextBox, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToggleSwitch, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToggleSwitch.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuToolTip, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuToolTip.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuTransition, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuTransition.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.BunifuUserControl, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.BunifuUserControl.dll</HintPath>
+    </Reference>
+    <Reference Include="Bunifu.UI.WinForms.Deprecated, Version=5.3.0.0, Culture=neutral, PublicKeyToken=e8e24ccd28363fe9, processorArchitecture=MSIL">
+      <HintPath>..\packages\Bunifu.UI.WinForms.5.3.0\lib\net40\Bunifu.UI.WinForms.Deprecated.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=9.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.8\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Admin\Admin.Designer.vb">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\Admin_login.Designer.vb">
+      <DependentUpon>Admin_login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Admin_login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart1DataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cart1DataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="CartDataDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CartDataDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cart\Billing.Designer.vb">
+      <DependentUpon>Billing.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cart\Billing.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cart\cart.Designer.vb">
+      <DependentUpon>cart.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cart\cart.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDataSet43.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet43.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet9.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet9.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="cart\feedback_form.Designer.vb">
+      <DependentUpon>feedback_form.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cart\feedback_form.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Food\food.Designer.vb">
+      <DependentUpon>food.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Food\food.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movies\booknow.Designer.vb">
+      <DependentUpon>booknow.vb</DependentUpon>
+    </Compile>
+    <Compile Include="movies\booknow.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DataDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet4.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet4.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet5.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet5.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet51.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet51.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet7.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet7.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="DataDataSet8.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DataDataSet8.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Food_inventory.Designer.vb">
+      <DependentUpon>Food_inventory.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\Food_inventory.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\clsMovement.vb" />
+    <Compile Include="Game\clsSegment.vb" />
+    <Compile Include="Game\ClsSnake.vb" />
+    <Compile Include="Forgotpassword.Designer.vb">
+      <DependentUpon>Forgotpassword.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forgotpassword.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Single1.Designer.vb">
+      <DependentUpon>Single1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Single1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Doubleplayer1.Designer.vb">
+      <DependentUpon>Doubleplayer1.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Doubleplayer1.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Single2.Designer.vb">
+      <DependentUpon>Single2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Single2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Doubleplayer2.Designer.vb">
+      <DependentUpon>Doubleplayer2.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Doubleplayer2.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\Maze.Designer.vb">
+      <DependentUpon>Maze.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\Maze.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Game\FrmSnake.Designer.vb">
+      <DependentUpon>FrmSnake.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\FrmSnake.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="help.Designer.vb">
+      <DependentUpon>help.vb</DependentUpon>
+    </Compile>
+    <Compile Include="help.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Homepage.Designer.vb">
+      <DependentUpon>Homepage.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Homepage.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.vb">
+      <DependentUpon>Login.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Login.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="movies\homme.Designer.vb">
+      <DependentUpon>homme.vb</DependentUpon>
+    </Compile>
+    <Compile Include="movies\homme.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="cart\recipt.Designer.vb">
+      <DependentUpon>recipt.vb</DependentUpon>
+    </Compile>
+    <Compile Include="cart\recipt.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\Car_home.Designer.vb">
+      <DependentUpon>Car_home.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\Car_home.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\CategoryManagement.Designer.vb">
+      <DependentUpon>CategoryManagement.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\CategoryManagement.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\New_carr.Designer.vb">
+      <DependentUpon>New_carr.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\New_carr.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\New_custo.Designer.vb">
+      <DependentUpon>New_custo.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\New_custo.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\Rentalcar.Designer.vb">
+      <DependentUpon>Rentalcar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\Rentalcar.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Rentals\RentalCarDataSet.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentalCarDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\RentalCarDataSet1.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentalCarDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\RentalCarDataSet2.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentalCarDataSet2.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\RentalCarDataSet3.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RentalCarDataSet3.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\Search_items.Designer.vb">
+      <DependentUpon>Search_items.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Rentals\Search_items.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopping\Books.Designer.vb">
+      <DependentUpon>Books.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shopping\Books.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopping\electronics.Designer.vb">
+      <DependentUpon>electronics.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shopping\electronics.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopping\grocery.Designer.vb">
+      <DependentUpon>grocery.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shopping\grocery.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopping\Menn.Designer.vb">
+      <DependentUpon>Menn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shopping\Menn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="shopping\Womennn.Designer.vb">
+      <DependentUpon>Womennn.vb</DependentUpon>
+    </Compile>
+    <Compile Include="shopping\Womennn.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Sign_up.Designer.vb">
+      <DependentUpon>Sign_up.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Sign_up.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Splash.Designer.vb">
+      <DependentUpon>Splash.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="Game\tic_tac.designer.vb">
+      <DependentUpon>tic_tac.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Game\tic_tac.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Admin\Admin.resx">
+      <DependentUpon>Admin.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Admin_login.resx">
+      <DependentUpon>Admin_login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cart\Billing.resx">
+      <DependentUpon>Billing.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cart\cart.resx">
+      <DependentUpon>cart.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cart\feedback_form.resx">
+      <DependentUpon>feedback_form.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Food\food.resx">
+      <DependentUpon>food.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movies\booknow.resx">
+      <DependentUpon>booknow.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\Food_inventory.resx">
+      <DependentUpon>Food_inventory.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forgotpassword.resx">
+      <DependentUpon>Forgotpassword.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Single1.resx">
+      <DependentUpon>Single1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Doubleplayer1.resx">
+      <DependentUpon>Doubleplayer1.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Single2.resx">
+      <DependentUpon>Single2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Doubleplayer2.resx">
+      <DependentUpon>Doubleplayer2.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\Maze.resx">
+      <DependentUpon>Maze.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\FrmSnake.resx">
+      <DependentUpon>FrmSnake.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Homepage.resx">
+      <DependentUpon>Homepage.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="movies\homme.resx">
+      <DependentUpon>homme.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\licenses.licx" />
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="cart\recipt.resx">
+      <DependentUpon>recipt.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\Car_home.resx">
+      <DependentUpon>Car_home.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\CategoryManagement.resx">
+      <DependentUpon>CategoryManagement.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\New_carr.resx">
+      <DependentUpon>New_carr.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\New_custo.resx">
+      <DependentUpon>New_custo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\Rentalcar.resx">
+      <DependentUpon>Rentalcar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Rentals\Search_items.resx">
+      <DependentUpon>Search_items.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopping\Books.resx">
+      <DependentUpon>Books.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopping\electronics.resx">
+      <DependentUpon>electronics.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopping\grocery.resx">
+      <DependentUpon>grocery.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopping\Menn.resx">
+      <DependentUpon>Menn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="shopping\Womennn.resx">
+      <DependentUpon>Womennn.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Sign_up.resx">
+      <DependentUpon>Sign_up.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Splash.resx">
+      <DependentUpon>Splash.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Game\tic_tac.resx">
+      <DependentUpon>tic_tac.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="..\.editorconfig">
+      <Link>.editorconfig</Link>
+    </None>
+    <None Include="Cart1DataDataSet.xsc">
+      <DependentUpon>Cart1DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Cart1DataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Cart1DataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Cart1DataDataSet.xss">
+      <DependentUpon>Cart1DataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CartDataDataSet.xsc">
+      <DependentUpon>CartDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CartDataDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CartDataDataSet.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CartDataDataSet.xss">
+      <DependentUpon>CartDataDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet1.xsc">
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet1.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet1.xss">
+      <DependentUpon>DataDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet3.xsc">
+      <DependentUpon>DataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet3.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet3.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet3.xss">
+      <DependentUpon>DataDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet4.xsc">
+      <DependentUpon>DataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet4.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet4.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet4.xss">
+      <DependentUpon>DataDataSet4.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet43.xsc">
+      <DependentUpon>DataDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet43.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet43.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet43.xss">
+      <DependentUpon>DataDataSet43.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet5.xsc">
+      <DependentUpon>DataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet5.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet5.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet5.xss">
+      <DependentUpon>DataDataSet5.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet51.xsc">
+      <DependentUpon>DataDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet51.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet51.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet51.xss">
+      <DependentUpon>DataDataSet51.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet7.xsc">
+      <DependentUpon>DataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet7.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet7.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet7.xss">
+      <DependentUpon>DataDataSet7.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet8.xsc">
+      <DependentUpon>DataDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet8.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet8.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet8.xss">
+      <DependentUpon>DataDataSet8.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet9.xsc">
+      <DependentUpon>DataDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="DataDataSet9.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>DataDataSet9.Designer.vb</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="DataDataSet9.xss">
+      <DependentUpon>DataDataSet9.xsd</DependentUpon>
+    </None>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+    <None Include="Rentals\RentalCarDataSet.xsc">
+      <DependentUpon>RentalCarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentalCarDataSet.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Rentals\RentalCarDataSet.xss">
+      <DependentUpon>RentalCarDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet1.xsc">
+      <DependentUpon>RentalCarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet1.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentalCarDataSet1.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Rentals\RentalCarDataSet1.xss">
+      <DependentUpon>RentalCarDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet2.xsc">
+      <DependentUpon>RentalCarDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet2.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentalCarDataSet2.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Rentals\RentalCarDataSet2.xss">
+      <DependentUpon>RentalCarDataSet2.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet3.xsc">
+      <DependentUpon>RentalCarDataSet3.xsd</DependentUpon>
+    </None>
+    <None Include="Rentals\RentalCarDataSet3.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>RentalCarDataSet3.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="Rentals\RentalCarDataSet3.xss">
+      <DependentUpon>RentalCarDataSet3.xsd</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Data.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Data_log.ldf">
+      <DependentUpon>Data.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rentals\RentalCar.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Rentals\RentalCar_log.ldf">
+      <DependentUpon>RentalCar.mdf</DependentUpon>
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="users.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="users_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>users.mdf</DependentUpon>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
